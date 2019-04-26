@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Home, About } from 'pages';
+import { Home, About, Posts } from 'pages';
 import Menu from '../components/Menu';
 class App extends Component {
     render() {
@@ -12,6 +12,7 @@ class App extends Component {
                     <Route path={"/about/:name"} component={About}/>    {/* :parameter */}
                     <Route path={"/about"} component={About}/>          {/* About.js에서 Parameter 처리 참조 */}
                 </Switch>
+                <Route path={"/posts"} component={Posts}/>
             </div>
         );
     }
